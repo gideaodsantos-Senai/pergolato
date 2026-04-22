@@ -1,0 +1,14 @@
+# Configurações do Git
+.DS_Store
+Thumbs.db
+*.log
+
+# Pastas de ambiente/ferramentas
+antigravity-kit/
+.gemini/
+
+# Pastas de servidor/temporários
+temp/
+tmp/
+dist/
+node_modules/
