@@ -571,7 +571,7 @@ footer {
     right: 30px;
     width: 65px;
     height: 65px;
-    background-color: #25d366;
+    background-color: #128c7e;
     border-radius: 50%;
     border: none;
     display: flex;
@@ -584,8 +584,8 @@ footer {
 }
 
 .whatsapp-btn img {
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 65px;
 }
 
 .whatsapp-btn:hover {
