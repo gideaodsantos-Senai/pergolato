@@ -91,8 +91,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Product Modal Logic ---
+    const modal = document.getElementById('product-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const closeModal = document.getElementById('close-modal');
+    const productImages = document.querySelectorAll('.product-image img');
+
+    productImages.forEach(img => {
+        img.addEventListener('click', () => {
+            const card = img.closest('.product-card');
+            const title = card.querySelector('h3').innerText;
+            
+            modalImg.src = img.src;
+            modalTitle.innerText = title;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Bloqueia scroll do fundo
+        });
+    });
+
+    const closeProductModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Libera scroll
+    };
+
+    if (closeModal) {
+        closeModal.addEventListener('click', closeProductModal);
+    }
+
+    // Fechar ao clicar fora da modal-container
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeProductModal();
+            }
+        });
+    }
+
+    // Fechar com a tecla Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeProductModal();
+        }
+    });
+
     startTimer();
     // Inicializar primeiro slide
     showSlide(0);
-
 });
