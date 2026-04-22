@@ -569,42 +569,40 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 65px;
-    height: 65px;
-    background-color: #128c7e;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
     border-radius: 50%;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     z-index: 9999;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation: pulse 2s infinite;
 }
 
 .whatsapp-btn img {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1) translateY(-5px);
-    background-color: #128c7e;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
 }
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        box-shadow: 0 0 0 0 rgba(18, 140, 126, 0.7);
     }
 
     70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        box-shadow: 0 0 0 25px rgba(18, 140, 126, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        box-shadow: 0 0 0 0 rgba(18, 140, 126, 0);
     }
 }
 
@@ -617,7 +615,7 @@ footer {
     }
 
     .whatsapp-btn img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 }
